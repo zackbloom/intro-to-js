@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Borrowed from https://github.com/adamschwartz/magic-of-css -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Three Pane App with Color — Potion — Magic of CSS — Adam Schwartz</title>
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/potions.css">
+        <link rel="stylesheet" href="../css/three-pane-app.css">
+        <link rel="stylesheet" href="../css/three-pane-app-with-color.css">
+        <link rel="stylesheet" href="css/sticky.css">
+    </head>
+    <body>
+        <div class="three-pane-app three-pane-app-with-color">
+            <div class="top"><div class="title"></div></div>
+            <div class="bottom">
+                <div class="left">
+                    <h3>How it works</h3> 
+
+                    <p>When the page is scrolled, we compare how far the page is scrolled to
+                    the height of the nav bar.  If we're scrolled further down than the bottom
+                    of the nav bar, we add a class to our sticky side bar ('off-screen').</p>
+
+                    <p>That class makes the sidebar position: fixed.</p>
+
+                    <h3>Code</h3>
+
+                    <ul class="resource-list">
+                        <li><a href="./js/sticky.js">Javascript
+                        <li><a href="./css/sticky.css">CSS
+                    </ul>
+                </div>
+                <div class="middle">
+                    <div class="page">
+                        <div class="title"></div>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+    
+    <script src="js/sticky.js"></script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Borrowed from https://github.com/adamschwartz/magic-of-css -->
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/potions.css">
+        <link rel="stylesheet" href="../css/three-pane-app.css">
+        <link rel="stylesheet" href="../css/three-pane-app-with-color.css">
+        <link rel="stylesheet" href="../css/sticky.css">
+    </head>
+    <body>
+        <div class="three-pane-app three-pane-app-with-color">
+            <div class="top"><div class="title"></div></div>
+            <div class="bottom">
+                <div class="left">
+                    <p>The idea is to make the right bar (which has class "right") to be 'sticky'.</p>
+
+                    <p>Sticky refers to the idea that it scrolls with the page normally, except if it would be scrolled
+                    off screen, it switches to be fixed to the top of the viewport.  <a href="../solution/index.html">Take a peak at the solution</a> to get
+                    an idea what I mean.</p>
+
+                    <p>It's a useful technique when you have a bar of info or controls on a long page.</p>
+
+                    <h3>What you need</h3>
+
+                    <dl>
+                      <dt><a href="">document.querySelector</a>
+                      <dd>Access an element on the page using a 'css-like' selector
+
+                      <dt><a href="">document.body.scrollTop</a>
+                      <dd>How far down the page has been scrolled in pixels
+
+                      <dt><a href="">document.addEventListener('scroll', fn)</a>
+                      <dd>Run a function whenever the page is scrolled
+
+                      <dt><a href="">anyElement.style.position = 'fixed'</a>
+                      <dd>Makes the element position fixed
+                    </dl>
+
+                    <h3>Bonus points</h3>
+                    <ul>
+                      <li>Instead of making the element position fixed in javascript, add a CSS
+                      class which specifies it.
+                      <li>Support the height of the nav bar changing.
+                    </ul>
+
+                    <dl>
+                      <dt><a href="">anyElement.clientHeight</a>
+                      <dd>The height of an element (optional)
+
+                      <dt><a href="">anyElement.classList.add</a>
+                      <dd>Add a class to an element
+
+                      <dt><a href="">anyElement.classList.remove</a>
+                      <dd>Remove a class from an element
+                    </dl>
+
+
+
+
+
+                </div>
+                <div class="middle">
+                    <div class="page">
+                        <div class="title"></div>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                        <p class="mock-paragraph"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

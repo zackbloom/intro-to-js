@@ -1,0 +1,7 @@
+.right {
+
+}
+
+body.sticky .right {
+  position: sticky;
+}
