@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/center-col.css">
+        <link rel="stylesheet" href="css/time.css">
+    </head>
+    <body>
+        <div class="page">
+
+            <p>Let's do something you can't do without javascript, we're gonna show the current time!</p>
+
+            <p>Enough jokes, let's make this happen.  Kindly place the current time in the <code>&lt;output&gt;</code> element.</p>
+            
+            <p>Next, use <code>setInterval</code> to update it as the time marches ever onward towards our inevitable demise.</p>
+
+            <p>All the work for this should be happening in the <a href="js/time.js">js/time.js</a> file.</p>
+
+            <h3>What You'll Need</h3>
+
+            <dl>
+                <dt><code>(new Date).toString()</code>
+                <dd>The current time as a string.
+
+                <dt><code>setInterval(fn, 1000)</code>
+                <dd>Run fn every second (1000 milliseconds)
+
+                <dt><code>document.querySelector('output')</code>
+                <dd>Returns the first element with tag name <code>output</code> on the page
+
+                <dt><code>anyElement.textContent = 'some string'</code>
+                <dd>Sets the content of anyElement
+            </dl>
+
+            <output>The Time Goes Here</output>
+        </div>
+
+        <script src="js/time.js"></script>
+    </body>
+</html>

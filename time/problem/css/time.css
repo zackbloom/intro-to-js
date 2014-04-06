@@ -1,0 +1,7 @@
+output {
+  font-size: 30px;
+  padding: 5px;
+  margin: 50px auto 10px;
+  display: block;
+  text-align: center;
+}
