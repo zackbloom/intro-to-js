@@ -8,7 +8,7 @@ app.use(express.json());
 
 var cors = function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
 
   next();
@@ -53,7 +53,10 @@ app.put('/todo/:id', cors, function(req, res) {
     }
   }
 
-  res.send(404);
+  // It wasen't found, create it:
+  todos.push(req.body)
+
+  res.send(200, 'OK');
 });
 
 app.options('*', cors, function(req, res) {
