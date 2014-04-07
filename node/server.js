@@ -22,7 +22,7 @@ app.get(APP_ROOT, cors, function(req, res) {
 var todos = [];
 
 app.get(APP_ROOT + 'todos', cors, function(req, res) {
-  res.send(200);
+  res.json(todo);
 });
 
 app.post(APP_ROOT + 'todo', cors, function(req, res) {
@@ -30,6 +30,11 @@ app.post(APP_ROOT + 'todo', cors, function(req, res) {
 
   res.json(req.body);
 });
+
+app.options('*', cors, function(req, res) {
+  res.send(204);
+});
+
 
 var port = process.env.PORT || 5000
 app.listen(port);
