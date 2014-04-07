@@ -3,7 +3,8 @@
 var express = require('express');
 var app = express();
 
-app.use(express.bodyParser);
+app.use(express.logger());
+app.use(express.json());
 
 var APP_ROOT = process.env.APP_ROOT || '/';
 
@@ -20,14 +21,14 @@ app.get(APP_ROOT, cors, function(req, res) {
 
 var todos = [];
 
-app.get(APP_ROOT + '/todos', cors, function(req, res) {
-  res.json(todos);
+app.get(APP_ROOT + 'todos', cors, function(req, res) {
+  res.send(200);
 });
 
-app.post(APP_ROOT + '/todo', cors, function(req, res) {
+app.post(APP_ROOT + 'todo', cors, function(req, res) {
   todos.push(req.body);
 
-  res.send(200);
+  res.json(req.body);
 });
 
 var port = process.env.PORT || 5000
