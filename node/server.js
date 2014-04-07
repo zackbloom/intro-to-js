@@ -22,7 +22,7 @@ app.get(APP_ROOT, cors, function(req, res) {
 var todos = [];
 
 app.get(APP_ROOT + 'todos', cors, function(req, res) {
-  res.json(todo);
+  res.json(todos);
 });
 
 app.post(APP_ROOT + 'todo', cors, function(req, res) {
