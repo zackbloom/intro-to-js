@@ -10,6 +10,12 @@
       this.el.appendChild(addView.el);
       addView.render();
 
+      var itemCountView = new ItemCountView({
+        collection: this.collection
+      });
+      this.el.appendChild(itemCountView.el)
+      itemCountView.render();
+
       var listView = new ListView({
         collection: this.collection,
       });

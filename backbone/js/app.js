@@ -1,7 +1,7 @@
 (function(){
 
-  var list = new ListItems();
-  list.fetch();
+  window.list = new ListItems(); // Collection of list items
+  list.fetch(); // Get from server
 
   var appView = new PageView({
     collection: list,

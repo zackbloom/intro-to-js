@@ -18,6 +18,19 @@
         model: model
       });
 
+      var _this = this;
+
+      item.on('edit', function(){
+        editView = new ListItemEditView({
+          model: model,
+          el: item.el
+        });
+
+        editView.render();
+
+        editView.on('doneEditing', _this.render, _this);
+      });
+
       this.el.appendChild(item.el);
 
       item.render();

@@ -1,1 +1,2 @@
-// Put your code here
+// Get the time
+// Show the time

@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-input {
+input.big {
     display: block;
     margin: 0 auto;
     font-size: 36px;

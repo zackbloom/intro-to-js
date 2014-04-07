@@ -6,7 +6,7 @@
     },
 
     render: function(){
-      this.el.innerHTML = '<form><input placeholder="Add item..."></form>'
+      this.el.innerHTML = '<form><input class=big placeholder="Add item..."></form>'
     },
 
     handleSubmit: function(e){
