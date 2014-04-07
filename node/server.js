@@ -6,8 +6,6 @@ var app = express();
 app.use(express.logger());
 app.use(express.json());
 
-var APP_ROOT = process.env.APP_ROOT || '/';
-
 var cors = function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', '*');
@@ -16,20 +14,46 @@ var cors = function(req, res, next) {
   next();
 }
 
-app.get(APP_ROOT, cors, function(req, res) {
+app.get('/', cors, function(req, res) {
   res.send(200, (new Date).toString());
 });
 
 var todos = [];
 
-app.get(APP_ROOT + 'todos', cors, function(req, res) {
+app.get('/todos', cors, function(req, res) {
   res.json(todos);
 });
 
-app.post(APP_ROOT + 'todo', cors, function(req, res) {
+app.post('/todo', cors, function(req, res) {
   todos.push(req.body);
 
   res.json(req.body);
+});
+
+app['delete']('/todo/:id', cors, function(req, res) {
+  for (var i=0; i < todos.length; i++){
+    if (todos[i].id === req.params.id){
+      todos.splice(i, 1);
+
+      res.send(200, 'OK');
+      return;
+    }
+  }
+
+  res.send(404);
+});
+
+app.put('/todo/:id', cors, function(req, res) {
+  for (var i=0; i < todos.length; i++){
+    if (todos[i].id === req.params.id){
+      todos[i] = req.body;
+
+      res.send(200, 'OK');
+      return;
+    }
+  }
+
+  res.send(404);
 });
 
 app.options('*', cors, function(req, res) {
