@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
 
+    <link rel="stylesheet" href="../time/css/center-col.css">
+    <link rel="stylesheet" href="css/checkboxes.css">
+    <link rel="stylesheet" href="css/todo.css">
   </head>
   <body>
+    <div class="page">
 
+      <p>Using an MVC, like Backbone, allows us to build bigger, more complex
+      applications on the client.</p>
+
+      <p>To learn Backbone, you're going to make some changes to our Todo list.</p>
+
+      <h3>I'd like to be able to</h3>
+
+      <ul>
+        <li>Delete items
+        <li>Edit items
+        <li>Reorder items
+      </ul>
+
+      <h3>Hints</h3>
+
+      <p>To delete an item, you want to call <code>model.delete()</code>, if the view is
+      listening to the proper event, that's all you should have to do to remove it from
+      the page and the database.  First though, you want to add seom sort of delete button
+      to each ListItemView.</p>
+
+      <p>To edit an item, you'll want to copy it's title into the input, and then change
+      the title of that item when enter is pressed.</p>
+
+      <p>To support reordering, give each model a 'priority' attribute, and 
+      give the collection a <a href="http://backbonejs.org/#Collection-comparator">
+      comparator</a> of that priority.  Lastly, make sure everything rerenders when
+      the priority changes.</p>
+
+      <p>The <a href="http://backbonejs.org/">Backbone Docs</a> are your friend.</p>
+
+      <div class="todo-list"></div>
+
+    </div>
+
+    <script src="../jquery/problem/js/jquery.js"></script>
     <script src="js/underscore.js"></script>
     <script src="js/backbone.js"></script>
+
+    <script src="js/models/ListItem.js"></script>
+    <script src="js/collections/ListItems.js"></script>
+
+    <script src="js/views/ListItemView.js"></script>
+    <script src="js/views/ListView.js"></script>
+
+    <script src="js/views/AddItemView.js"></script>
+
+    <script src="js/views/PageView.js"></script>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

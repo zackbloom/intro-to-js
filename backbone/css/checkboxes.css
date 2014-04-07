@@ -1,0 +1,13 @@
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type=checkbox]:checked ~ label {
+  text-decoration: line-through;
+}
+
+label {
+  cursor: pointer;
+}
