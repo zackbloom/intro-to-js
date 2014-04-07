@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/center-col.css">
+        <link rel="stylesheet" href="css/time.css">
+    </head>
+    <body>
+        <div class="page">
+
+            <p>As you have seen, it's certainly possible to do all sorts of things with just what
+            the browser gives us.  Historically however, this used to be much less true.  Even today,
+            if you want to support older browsers, it can be helpful to use a library which abstracts
+            away compatibility fixes for you.</p>
+
+            <p>Beyond that, the browser makers can't move as quickly as frontend developers do.  Therefore
+            there are all sorts of brilliant libraries out there which exist to make our lives easier.</p>
+
+            <p><strong>jQuery</strong> is without a doubt the most popular library used today.  It will
+            almost certainly be used by any web app you work on in the near future.</p>
+
+            <p>jQuery gives you a better syntax to do things like finding elements and making requests.
+            To get a feel of how it works, you're going to rebuild our time example.  This time however,
+            we're going to request the time from an API which is available at <a href="http://timeapi.org">
+            timeapi.org</a>.</p>
+
+            <p>jQuery is already included on this page, and is accessed as <code>$</code> (the dollar symbol).
+            All the methods you need are below, be sure to follow the links to get more explanation of 
+            how they work.</p>
+
+            <p>Hit this URL from your code to get the time in a nice format:
+            <a href="http://www.timeapi.org/utc/now?\a%20\b%20\d%20\I:\M:\S">http://www.timeapi.org/utc/now?\a%20\b%20\d%20\I:\M:\S</a>.</p>
+
+            <h3>What You'll Need</h3>
+
+            <dl>
+                <dt><code><a href="http://api.jquery.com/jQuery/#jQuery1">var $el = $('output')</a></code>
+                <dd>Returns the elements with tag name <code>output</code> on the page.
+
+                <dt><code>setInterval(fn, 1000)</code>
+                <dd>Run fn every second (1000 milliseconds)
+
+                <dt><code><a href="http://api.jquery.com/jQuery.get/">$.get(url, fn)</a></code>
+                <dd>Makes an HTTP request to GET <code>url</code>, and call <code>fn</code> with the return value.
+
+                <dt><code><a href="http://api.jquery.com/text/">$el.text('new content')</a></code>
+                <dd>Sets the content of the jQuery element(s) $el
+            </dl>
+
+            <output>The Time Goes Here</output>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/time.js"></script>
+        <script src="js/time.js"></script>
+    </body>
+</html>

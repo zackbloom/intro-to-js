@@ -1,0 +1,15 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+dl dt {
+  margin-top: 10px;
+  font-family: monospace;
+}
+
+dl dd {
+  margin-top: 3px;
+  margin-left: 10px
+}
