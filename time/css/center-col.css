@@ -5,9 +5,11 @@
 }
 
 dl dt {
-  margin-top: 5px;
+  margin-top: 10px;
+  font-family: monospace;
 }
 
 dl dd {
   margin-top: 3px;
+  margin-left: 10px
 }

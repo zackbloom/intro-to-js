@@ -1,0 +1,27 @@
+.results {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    transition: opacity 500ms;
+}
+
+.results img {
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+}
+
+.results.loading {
+    background: white url(../../imgs/loading.gif) no-repeat 50% 0;
+    min-height: 300px;
+    min-width: 400px;
+    opacity: 0.6;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    font-size: 36px;
+    padding: 10px;
+    width: 400px;
+}

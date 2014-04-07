@@ -1,0 +1,17 @@
+.results {
+    list-style-type: none;
+    margin: 10px auto 0;
+}
+
+.results img {
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+}
+
+input {
+    display: block;
+    margin: 0 auto;
+    font-size: 36px;
+    padding: 10px;
+}

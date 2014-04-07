@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="../../time/css/center-col.css">
+        <link rel="stylesheet" href="css/github.css">
+    </head>
+    <body>
+
+        <div class="page">
+
+           <p>Let's build a GitHub Search UI!</p>
+
+           <p>GitHub has a wonderful <a href="https://developer.github.com/v3/search">API</a>.
+            Start by <a href="https://github.com/settings/applications">grabbing
+            an auth token</a>, and adding it to the end of the url of this page.  I have a bit of code
+            in token.js which grabs it out of that hash, and makes it available for our search code,
+            but don't worry about it now.</p>
+
+            <p>Once that's done, you should see a list of bitcoin projects below the
+            search box.  Unfortunately, the content of the search box is irrelevant right now,
+            no matter what, we always search for bitcoin!</p>
+
+            <p>Your task is to change this page such that when I type into the search box,
+            it actually searches for what I ask for.</p>
+
+            <p>We're going to be making requests to the Github API.  I don't want you to get lost in the
+            weeds of how that works just yet, so I've written the actual request-y bit, and packaged it
+            up into a nice little function for you.  You can just call <code>search</code> with your search
+            term and a function you'd like it to run with the list of results.</p>
+
+            <p>Put all of your code in <a href="js/github.js">js/github.js</a>.</p>
+
+            <h3>What you'll need</h3>
+
+            <dl>
+                <dt>anyInput.value
+                <dd>The current value of the input
+
+                <dt>anyInput.addEventListener('keyup', fn)
+                <dd>Runs fn whenever a key is pressed in the input
+
+                <dt>document.querySelector('.search')
+                <dd>Return the first element on the page with class 'search'
+            </dl>
+
+            <h3>Bonus</h3>
+
+            <p>Show a loading spinner.  There's a loading gif in the imgs folder.</p>
+            <!-- Gif from http://d13yacurqjgara.cloudfront.net/users/157197/screenshots/968023/framely.gif -->
+
+            <input class="search" placeholder="Search github..." value="bitcoin">
+
+            <ul class="results"></ul>
+
+        </div>
+
+        <script src="js/token.js"></script>
+        <script src="js/helpers.js"></script>
+        <script src="js/github.js"></script>
+    </body>
+</html>
