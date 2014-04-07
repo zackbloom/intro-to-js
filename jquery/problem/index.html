@@ -32,23 +32,36 @@
             All the methods you need are below, be sure to follow the links to get more explanation of 
             how they work.</p>
 
+            <p>One more twist, the there's a start and stop button.</p>
+
             <h3>What You'll Need</h3>
 
             <dl>
                 <dt><code><a href="http://api.jquery.com/jQuery/#jQuery1">var $el = $('output')</a></code>
                 <dd>Returns the elements with tag name <code>output</code> on the page.
 
-                <dt><code>setInterval(fn, 1000)</code>
+                <dt><code>intervalId = setInterval(fn, 1000)</code>
                 <dd>Run fn every second (1000 milliseconds)
+
+                <dt><code>clearInterval(intervalId)</code>
+                <dd>Stop the interval with that intervalId
 
                 <dt><code><a href="http://api.jquery.com/jQuery.get/">$.get(url, fn)</a></code>
                 <dd>Makes an HTTP request to GET <code>url</code>, and call <code>fn</code> with the return value.
 
                 <dt><code><a href="http://api.jquery.com/text/">$el.text('new content')</a></code>
                 <dd>Sets the content of the jQuery element(s) $el
+
+                <dt><code><a href="http://api.jquery.com/click/">$el.click(fn)</a></code>
+                <dd>Run <code>fn</code> when the jQuery element $el is clicked on
             </dl>
 
             <output>The Time Goes Here</output>
+
+            <div class="buttons">
+              <button class="start">Start</button>
+              <button class="stop">Stop</button>
+            </div>
         </div>
 
         <script src="js/jquery.js"></script>

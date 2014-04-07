@@ -1,7 +1,9 @@
 var last = +new Date;
 var time = null;
 
-tick = function(){
+var running = true;
+
+var tick = function(){
   var diff = new Date - last;
   last = +new Date;
 
@@ -11,10 +13,11 @@ tick = function(){
     $('output').text(new Date(time).toString());
   }
 
-  requestAnimationFrame(tick);
+  if (running)
+    requestAnimationFrame(tick);
 }
 
-sync = function(){
+var sync = function(){
   $.get('http://time.hate.io', function(serverTime){
       time = Date.parse(serverTime);
 
@@ -22,5 +25,17 @@ sync = function(){
   });
 }
 
-tick();
+var start = function(){
+  running = true;
+
+  tick();
+}
+var stop = function(){
+  running = false;
+}
+
+$('.start').click(start);
+$('.stop').click(stop);
+
+start();
 sync();
