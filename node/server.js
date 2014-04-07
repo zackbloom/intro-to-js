@@ -3,12 +3,31 @@
 var express = require('express');
 var app = express();
 
+app.use(express.bodyParser);
+
 var APP_ROOT = process.env.APP_ROOT || '/';
 
-app.get(APP_ROOT, function(req, res) {
+var cors = function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', '*');
 
+  next();
+}
+
+app.get(APP_ROOT, cors, function(req, res) {
   res.send(200, (new Date).toString());
+});
+
+var todos = [];
+
+app.get(APP_ROOT + '/todos', cors, function(req, res) {
+  res.json(todos);
+});
+
+app.post(APP_ROOT + '/todo', cors, function(req, res) {
+  todos.push(req.body);
+
+  res.send(200);
 });
 
 var port = process.env.PORT || 5000
