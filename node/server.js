@@ -32,7 +32,7 @@ app.post(APP_ROOT + 'todo', cors, function(req, res) {
 });
 
 app.options('*', cors, function(req, res) {
-  res.send(204);
+  res.send(200, 'OK');
 });
 
 
