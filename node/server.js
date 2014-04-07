@@ -1,4 +1,4 @@
-!#/app/vendor/node/bin/node
+#!/app/vendor/node/bin/node
 
 var express = require('express');
 var app = express();
